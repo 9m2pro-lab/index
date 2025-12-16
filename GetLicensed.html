@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Panduan Lesen Radio Amatur Malaysia (MCMC)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1587932683407-28d57d598687?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/XYNVdncV/MARTS-4-(1).png" alt="MARTS Logo" class="h-8 w-auto object-contain rounded border border-yellow-400">
+                <span id="navBrand" class="text-sm md:text-lg font-bold tracking-wide leading-tight">MARTS</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="langToggle" class="bg-yellow-500 text-blue-900 font-bold px-3 py-1 rounded-md text-sm hover:bg-yellow-400 transition" onclick="toggleLanguage()">
+                    EN / MS
+                </button>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#pengenalan" id="navIntro" class="hover:text-yellow-400 transition">Pengenalan</a>
+                    <a href="#kelas" id="navClasses" class="hover:text-yellow-400 transition">Kelas Lesen</a>
+                    <a href="#peperiksaan" id="navExam" class="hover:text-yellow-400 transition">Peperiksaan (RAE)</a>
+                    <a href="#permohonan" id="navApply" class="hover:text-yellow-400 transition">Cara Mohon</a>
+                    <a href="#sumber" id="navResources" class="hover:text-yellow-400 transition">Sumber</a>
+                </div>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 px-4 py-2">
+            <a href="#pengenalan" id="mobileNavIntro" class="block py-2 hover:text-yellow-400">Pengenalan</a>
+            <a href="#kelas" id="mobileNavClasses" class="block py-2 hover:text-yellow-400">Kelas Lesen</a>
+            <a href="#peperiksaan" id="mobileNavExam" class="block py-2 hover:text-yellow-400">Peperiksaan (RAE)</a>
+            <a href="#permohonan" id="mobileNavApply" class="block py-2 hover:text-yellow-400">Cara Mohon</a>
+        </div>
+    </nav>
+
+    <header class="hero-bg h-96 flex items-center justify-center text-center px-4">
+        <div class="text-white max-w-3xl">
+            <h1 id="heroTitle" class="text-4xl md:text-5xl font-bold mb-4">Dapatkan Lesen Radio Amatur Malaysia</h1>
+            <p id="heroSubtitle" class="text-lg md:text-xl mb-8 text-gray-200">Panduan lengkap langkah demi langkah berdasarkan garis panduan terkini Suruhanjaya Komunikasi dan Multimedia Malaysia (MCMC).</p>
+            <a href="#kelas" id="heroButton" class="bg-yellow-500 text-blue-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-400 transition duration-300 shadow-lg inline-flex items-center">
+                Mula Sekarang <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="pengenalan" class="py-16 container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 id="sectionTitleIntro" class="text-3xl font-bold text-blue-900">Apa itu Radio Amatur?</h2>
+            <div class="w-24 h-1 bg-yellow-500 mx-auto mt-2 rounded"></div>
+        </div>
+        <div class="max-w-3xl mx-auto">
+            <div class="space-y-4 text-lg leading-relaxed text-gray-700 text-center">
+                <p id="introPara1">
+                    Radio Amatur, atau dikenali sebagai "Ham Radio", adalah hobi komunikasi radio yang membolehkan anda berhubung dengan orang lain di seluruh dunia tanpa menggunakan internet atau telefon bimbit.
+                </p>
+                <p id="introPara2">
+                    Di Malaysia, aktiviti ini dikawal selia oleh <strong>Suruhanjaya Komunikasi dan Multimedia Malaysia (MCMC)</strong>. Untuk menggunakan peralatan radio amatur secara sah, anda wajib memiliki:
+                </p>
+                <div class="inline-block text-left mt-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <ul class="list-none space-y-3 font-medium text-blue-900">
+                        <li id="introItem1" class="flex items-center"><i class="fas fa-certificate text-yellow-500 mr-3"></i> Sijil Perakuan Pengendali Radio Amatur (AROC)</li>
+                        <li id="introItem2" class="flex items-center"><i class="fas fa-broadcast-tower text-yellow-500 mr-3"></i> Penguntukan Radas (Apparatus Assignment - AA)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kelas" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 id="classesTitle" class="text-3xl font-bold text-blue-900">Kategori Lesen Terkini (Mulai 2023)</h2>
+                <p id="classesSubtitle" class="text-gray-600 mt-2">Struktur lesen telah dikemaskini dengan pengenalan Kelas C.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-green-500 transform hover:-translate-y-2 transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 id="classCTitle" class="text-2xl font-bold text-gray-800">Kelas C</h3>
+                            <span id="classCBadge" class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Pemula</span>
+                        </div>
+                        <p id="classCDesc" class="text-gray-600 mb-4">Peringkat permulaan (Entry Level) yang diperkenalkan baru-baru ini.</p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center"><i class="fas fa-id-badge w-6 text-green-500"></i> Prefix: <strong>9W3</strong></li>
+                            <li id="classCMinAgeLabel" class="flex items-center"><i class="fas fa-user-clock w-6 text-green-500"></i> Umur Minima: <strong>12 Tahun</strong></li>
+                            <li id="classCPowerLabel" class="flex items-center"><i class="fas fa-bolt w-6 text-green-500"></i> Kuasa: Max <strong>25 Watt</strong></li>
+                            <li id="classCBandsLabel" class="flex items-center"><i class="fas fa-broadcast-tower w-6 text-green-500"></i> Jalur: <strong>VHF & UHF</strong></li>
+                            <li id="classCExamLabel" class="flex items-center"><i class="fas fa-book w-6 text-green-500"></i> Ujian: <strong>35 Soalan (1 Jam)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-blue-500 transform hover:-translate-y-2 transition duration-300 relative">
+                    <div id="classBPill" class="absolute top-0 right-0 bg-blue-500 text-white text-xs px-2 py-1 rounded-bl">Popular</div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 id="classBTitle" class="text-2xl font-bold text-gray-800">Kelas B</h3>
+                            <span id="classBBadge" class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">Standard</span>
+                        </div>
+                        <p id="classBDesc" class="text-gray-600 mb-4">Lesen standard yang paling biasa dimiliki oleh pengendali radio di Malaysia.</p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center"><i class="fas fa-id-badge w-6 text-blue-500"></i> Prefix: <strong>9W2/6/8</strong></li>
+                            <li id="classBMinAgeLabel" class="flex items-center"><i class="fas fa-user-clock w-6 text-blue-500"></i> Umur Minima: <strong>14 Tahun</strong></li>
+                            <li id="classBPowerLabel" class="flex items-center"><i class="fas fa-bolt w-6 text-blue-500"></i> Kuasa: Max <strong>50 Watt</strong></li>
+                            <li id="classBBandsLabel" class="flex items-center"><i class="fas fa-broadcast-tower w-6 text-blue-500"></i> Jalur: <strong>VHF/UHF & HF Terpilih</strong></li>
+                            <li id="classBExamLabel" class="flex items-center"><i class="fas fa-book w-6 text-blue-500"></i> Ujian: <strong>50 Soalan (1.5 Jam)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-yellow-500 transform hover:-translate-y-2 transition duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 id="classATitle" class="text-2xl font-bold text-gray-800">Kelas A</h3>
+                            <span id="classABadge" class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2 py-1 rounded">Lanjutan</span>
+                        </div>
+                        <p id="classADesc" class="text-gray-600 mb-4">Peringkat tertinggi dengan hak keistimewaan spektrum penuh.</p>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center"><i class="fas fa-id-badge w-6 text-yellow-500"></i> Prefix: <strong>9M2/6/8</strong></li>
+                            <li id="classAMinAgeLabel" class="flex items-center"><i class="fas fa-user-clock w-6 text-yellow-500"></i> Umur Minima: <strong>15 Tahun</strong></li>
+                            <li id="classAPowerLabel" class="flex items-center"><i class="fas fa-bolt w-6 text-yellow-500"></i> Kuasa: Max <strong>1000 Watt (PEP)</strong></li>
+                            <li id="classABandsLabel" class="flex items-center"><i class="fas fa-broadcast-tower w-6 text-yellow-500"></i> Jalur: <strong>All Band</strong></li>
+                            <li id="classAExamLabel" class="flex items-center"><i class="fas fa-book w-6 text-yellow-500"></i> Ujian: <strong>50 Soalan (1.5 Jam)</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="peperiksaan" class="py-16 container mx-auto px-4">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div class="grid md:grid-cols-2">
+                <div class="p-8 md:p-12">
+                    <h2 id="examTitle" class="text-3xl font-bold text-blue-900 mb-6">Peperiksaan Radio Amatur (RAE)</h2>
+                    <p id="examIntroPara" class="text-gray-700 mb-6">
+                        Untuk mendapatkan lesen, anda perlu lulus Peperiksaan Radio Amatur (Radio Amateur Examination - RAE). MCMC kini menawarkan RAE secara berkomputer.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 id="examFormatTitle" class="font-bold text-lg text-blue-800"><i class="fas fa-file-alt mr-2"></i>Format Baharu</h4>
+                            <ul class="list-disc list-inside text-gray-600 ml-6 mt-2">
+                                <li id="examFormatA"><strong>Kelas A & B:</strong> 50 Soalan Objektif (1.5 Jam)</li>
+                                <li id="examFormatC"><strong>Kelas C:</strong> 35 Soalan Objektif (1 Jam)</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 id="examSyllabusTitle" class="font-bold text-lg text-blue-800"><i class="fas fa-book-reader mr-2"></i>Silibus Utama</h4>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span id="tagAct" class="px-3 py-1 bg-gray-200 rounded-full text-sm">Akta & Peraturan</span>
+                                <span id="tagTheory" class="px-3 py-1 bg-gray-200 rounded-full text-sm">Teori Elektrik Asas</span>
+                                <span id="tagAntenna" class="px-3 py-1 bg-gray-200 rounded-full text-sm">Antena & Propagasi</span>
+                                <span id="tagSafety" class="px-3 py-1 bg-gray-200 rounded-full text-sm">Keselamatan (Safety)</span>
+                                <span id="tagProcedure" class="px-3 py-1 bg-gray-200 rounded-full text-sm">Prosedur Operasi</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 id="examFeeTitle" class="font-bold text-lg text-blue-800"><i class="fas fa-money-bill-wave mr-2"></i>Yuran Peperiksaan</h4>
+                            <p id="examFeeText" class="text-gray-600 ml-6 mt-1"><strong>RM 50.00</strong> (Dibayar semasa pendaftaran peperiksaan)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-900 p-8 md:p-12 text-white flex flex-col justify-center">
+                    <h3 id="examTipsTitle" class="text-2xl font-bold mb-4">Tips Lulus RAE</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-yellow-400"></i>
+                            <p id="tip1">Baca <strong>"Guidelines for Amateur Radio Service in Malaysia (3rd Edition)"</strong>.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-yellow-400"></i>
+                            <p id="tip2">Fahami Kod Q (Q-Codes) dan Abjad Fonetik (Alpha, Bravo, Charlie...).</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-yellow-400"></i>
+                            <p id="tip3">Lakukan latihan soalan 'Bank Soalan' yang disediakan di laman web MCMC.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-3 text-yellow-400"></i>
+                            <p id="tip4">Sertai kelas bimbingan kelab radio amatur MARTS.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="permohonan" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 id="stepsTitle" class="text-3xl font-bold text-blue-900 mb-12">Langkah Demi Langkah</h2>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl font-bold">1</div>
+                    <h3 id="step1Title" class="font-bold text-lg mb-2">Daftar Peperiksaan</h3>
+                    <p id="step1Desc" class="text-sm text-gray-600">Daftar akaun di portal <a href="#" class="text-blue-600 underline">MCMC SEMS</a>. Pilih lokasi dan tarikh peperiksaan yang sesuai.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl font-bold">2</div>
+                    <h3 id="step2Title" class="font-bold text-lg mb-2">Duduki & Lulus</h3>
+                    <p id="step2Desc" class="text-sm text-gray-600">Hadir ke pusat peperiksaan. Jawab soalan komputer. Keputusan selalunya diketahui dengan cepat.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl font-bold">3</div>
+                    <h3 id="step3Title" class="font-bold text-lg mb-2">Mohon AA (Lesen)</h3>
+                    <p id="step3Desc" class="text-sm text-gray-600">Setelah lulus, log masuk ke portal <a href="#" class="text-blue-600 underline">e-SPECTRA</a>. Mohon 'Assignment' (AA) baru.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 text-2xl font-bold">4</div>
+                    <h3 id="step4Title" class="font-bold text-lg mb-2">Bayar & Terima</h3>
+                    <p id="step4Desc" class="text-sm text-gray-600">Bayar yuran permohonan (RM60) + yuran tahunan. Terima Callsign (contoh: 9W2XYZ) anda!</p>
+                </div>
+            </div>
+
+            <div class="mt-12 max-w-2xl mx-auto bg-white rounded-lg shadow overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-blue-900 text-white">
+                        <tr>
+                            <th id="tableHeaderType" class="p-4">Jenis Bayaran</th>
+                            <th id="tableHeaderAmount" class="p-4">Jumlah (RM)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b">
+                            <td id="feeRow1Type" class="p-4">Yuran Peperiksaan (RAE)</td>
+                            <td class="p-4 font-bold">RM 50.00</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td id="feeRow2Type" class="p-4">Yuran Permohonan AA (Sekali sahaja)</td>
+                            <td class="p-4 font-bold">RM 60.00</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td id="feeRow3Type" class="p-4">Yuran Tahunan Kelas A</td>
+                            <td class="p-4 font-bold">RM 36.00</td>
+                        </tr>
+                        <tr class="border-b bg-blue-50">
+                            <td id="feeRow4Type" class="p-4">Yuran Tahunan Kelas B</td>
+                            <td class="p-4 font-bold">RM 24.00</td>
+                        </tr>
+                        <tr class="border-b bg-blue-50">
+                            <td id="feeRow5Type" class="p-4">Yuran Tahunan Kelas C</td>
+                            <td class="p-4 font-bold">RM 12.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="sumber" class="py-16 container mx-auto px-4">
+        <div class="text-center mb-8">
+            <h2 id="resourcesTitle" class="text-3xl font-bold text-blue-900">Pautan Berguna</h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://espectra.mcmc.gov.my" target="_blank" id="linkESPECTRA" class="flex items-center bg-white border border-gray-300 px-6 py-3 rounded-lg hover:border-blue-500 hover:text-blue-600 transition shadow-sm">
+                <i class="fas fa-globe mr-2"></i> Portal e-SPECTRA (Permohonan Lesen)
+            </a>
+            <a href="https://sems.mcmc.gov.my" target="_blank" id="linkSEMS" class="flex items-center bg-white border border-gray-300 px-6 py-3 rounded-lg hover:border-blue-500 hover:text-blue-600 transition shadow-sm">
+                <i class="fas fa-edit mr-2"></i> Portal SEMS (Daftar Peperiksaan)
+            </a>
+            <a href="https://sems.mcmc.gov.my/sems/contents/index" target="_blank" id="linkGuidelines" class="flex items-center bg-white border border-gray-300 px-6 py-3 rounded-lg hover:border-blue-500 hover:text-blue-600 transition shadow-sm">
+                <i class="fas fa-file-pdf mr-2"></i> Garis Panduan MCMC (Laman Web)
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p id="footerDisclaimer" class="mb-4 text-sm">
+                Penafian: Laman web ini adalah panduan tidak rasmi untuk tujuan panduan. Sila rujuk laman web rasmi <a href="https://www.mcmc.gov.my" class="text-yellow-400 hover:underline">MCMC</a> untuk maklumat perundangan yang paling tepat dan terkini.
+            </p>
+            <p id="footerCredit">&copy; 2025 Panduan Radio Amatur Malaysia. Dibina dengan semangat 73. &copy;</p>
+            <p>Malaysian Amateur Radio Transmitters' Society</p>
+            <p>www.marts.org.my</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'ms';
+
+        // Translation Data Structure
+        const translations = {
+            pageTitle: { ms: 'Panduan Lesen Radio Amatur Malaysia (MCMC)', en: 'Malaysian Amateur Radio License Guide (MCMC)' },
+            navBrand: { ms: 'MARTS', en: 'MARTS' },
+            navIntro: { ms: 'Pengenalan', en: 'Introduction' },
+            navClasses: { ms: 'Kelas Lesen', en: 'License Classes' },
+            navExam: { ms: 'Peperiksaan (RAE)', en: 'Examination (RAE)' },
+            navApply: { ms: 'Cara Mohon', en: 'How to Apply' },
+            navResources: { ms: 'Sumber', en: 'Resources' },
+            mobileNavIntro: { ms: 'Pengenalan', en: 'Introduction' },
+            mobileNavClasses: { ms: 'Kelas Lesen', en: 'License Classes' },
+            mobileNavExam: { ms: 'Peperiksaan (RAE)', en: 'Examination (RAE)' },
+            mobileNavApply: { ms: 'Cara Mohon', en: 'How to Apply' },
+            
+            heroTitle: { ms: 'Dapatkan Lesen Radio Amatur Malaysia', en: 'Obtain Your Malaysian Amateur Radio License' },
+            heroSubtitle: { ms: 'Panduan lengkap langkah demi langkah berdasarkan garis panduan terkini Suruhanjaya Komunikasi dan Multimedia Malaysia (MCMC).', en: 'A complete step-by-step guide based on the latest guidelines from the Malaysian Communications and Multimedia Commission (MCMC).' },
+            heroButton: { ms: 'Mula Sekarang', en: 'Start Now' },
+            
+            sectionTitleIntro: { ms: 'Apa itu Radio Amatur?', en: 'What is Amateur Radio?' },
+            introPara1: { ms: 'Radio Amatur, atau dikenali sebagai "Ham Radio", adalah hobi komunikasi radio yang membolehkan anda berhubung dengan orang lain di seluruh dunia tanpa menggunakan internet atau telefon bimbit.', en: 'Amateur Radio, or "Ham Radio", is a radio communication hobby that allows you to connect with others worldwide without using the internet or mobile phones.' },
+            introPara2: { ms: 'Di Malaysia, aktiviti ini dikawal selia oleh <strong>Suruhanjaya Komunikasi dan Multimedia Malaysia (MCMC)</strong>. Untuk menggunakan peralatan radio amatur secara sah, anda wajib memiliki:', en: 'In Malaysia, this activity is regulated by <strong>the Malaysian Communications and Multimedia Commission (MCMC)</strong>. To legally use amateur radio equipment, you must possess:' },
+            introItem1: { ms: 'Sijil Perakuan Pengendali Radio Amatur (AROC)', en: "Amateur Radio Operator's Certificate (AROC)" },
+            introItem2: { ms: 'Penguntukan Radas (Apparatus Assignment - AA)', en: 'Apparatus Assignment (AA)' },
+            
+            classesTitle: { ms: 'Kategori Lesen Terkini (Mulai 2023)', en: 'Latest License Categories (Starting 2023)' },
+            classesSubtitle: { ms: 'Struktur lesen telah dikemaskini dengan pengenalan Kelas C.', en: 'The license structure has been updated with the introduction of Class C.' },
+            
+            classCTitle: { ms: 'Kelas C', en: 'Class C' },
+            classCBadge: { ms: 'Pemula', en: 'Entry' },
+            classCDesc: { ms: 'Peringkat permulaan (Entry Level) yang diperkenalkan baru-baru ini.', en: 'The recently introduced entry-level license.' },
+            
+            classBTitle: { ms: 'Kelas B', en: 'Class B' },
+            classBBadge: { ms: 'Standard', en: 'Standard' },
+            classBPill: { ms: 'Popular', en: 'Popular' },
+            classBDesc: { ms: 'Lesen standard yang paling biasa dimiliki oleh pengendali radio di Malaysia.', en: 'The standard license most commonly held by radio operators in Malaysia.' },
+            
+            classATitle: { ms: 'Kelas A', en: 'Class A' },
+            classABadge: { ms: 'Lanjutan', en: 'Advanced' },
+            classADesc: { ms: 'Peringkat tertinggi dengan hak keistimewaan spektrum penuh.', en: 'The highest level with full spectrum privileges.' },
+            
+            examTitle: { ms: 'Peperiksaan Radio Amatur (RAE)', en: 'Radio Amateur Examination (RAE)' },
+            examIntroPara: { ms: 'Untuk mendapatkan lesen, anda perlu lulus Peperiksaan Radio Amatur (Radio Amateur Examination - RAE). MCMC kini menawarkan RAE secara berkomputer.', en: 'To obtain a license, you must pass the Radio Amateur Examination (RAE). MCMC now offers the RAE via computer-based testing.' },
+            examFormatTitle: { ms: 'Format Baharu', en: 'New Format' },
+            examFormatA: { ms: '<strong>Kelas A & B:</strong> 50 Soalan Objektif (1.5 Jam)', en: '<strong>Class A & B:</strong> 50 Objective Questions (1.5 Hours)' },
+            examFormatC: { ms: '<strong>Kelas C:</strong> 35 Soalan Objektif (1 Jam)', en: '<strong>Class C:</strong> 35 Objective Questions (1 Hour)' },
+            examSyllabusTitle: { ms: 'Silibus Utama', en: 'Main Syllabus' },
+            tagAct: { ms: 'Akta & Peraturan', en: 'Acts & Regulations' },
+            tagTheory: { ms: 'Teori Elektrik Asas', en: 'Basic Electrical Theory' },
+            tagAntenna: { ms: 'Antena & Propagasi', en: 'Antennas & Propagation' },
+            tagSafety: { ms: 'Keselamatan (Safety)', en: 'Safety' },
+            tagProcedure: { ms: 'Prosedur Operasi', en: 'Operating Procedures' },
+            examFeeTitle: { ms: 'Yuran Peperiksaan', en: 'Examination Fee' },
+            examFeeText: { ms: '<strong>RM 50.00</strong> (Dibayar semasa pendaftaran peperiksaan)', en: '<strong>RM 50.00</strong> (Paid during examination registration)' },
+            examTipsTitle: { ms: 'Tips Lulus RAE', en: 'RAE Passing Tips' },
+            tip1: { ms: 'Baca <strong>"Guidelines for Amateur Radio Service in Malaysia (3rd Edition)"</strong>.', en: 'Read the <strong>"Guidelines for Amateur Radio Service in Malaysia (3rd Edition)"</strong>.' },
+            tip2: { ms: 'Fahami Kod Q (Q-Codes) dan Abjad Fonetik (Alpha, Bravo, Charlie...).', en: 'Understand Q-Codes and the Phonetic Alphabet (Alpha, Bravo, Charlie...).' },
+            tip3: { ms: 'Lakukan latihan soalan \'Bank Soalan\' yang disediakan di laman web MCMC.', en: 'Practice with the \'Question Bank\' provided on the MCMC website.' },
+            tip4: { ms: 'Sertai kelas bimbingan kelab radio amatur MARTS.', en: 'Join coaching classes organized by the MARTS amateur radio club.' },
+            
+            stepsTitle: { ms: 'Langkah Demi Langkah', en: 'Step by Step' },
+            step1Title: { ms: 'Daftar Peperiksaan', en: 'Register for Exam' },
+            step1Desc: { ms: 'Daftar akaun di portal <a href="https://sems.mcmc.gov.my/" class="text-blue-600 underline">MCMC SEMS</a>. Pilih lokasi dan tarikh peperiksaan yang sesuai.', en: 'Register an account on the <a href="#" class="text-blue-600 underline">MCMC SEMS</a> portal. Choose a suitable location and date for the examination.' },
+            step2Title: { ms: 'Duduki & Lulus', en: 'Take & Pass' },
+            step2Desc: { ms: 'Hadir ke pusat peperiksaan. Jawab soalan komputer. Keputusan selalunya diketahui dengan cepat.', en: 'Attend the examination center. Answer the computer-based questions. Results are usually known quickly.' },
+            step3Title: { ms: 'Mohon AA (Lesen)', en: 'Apply for AA (License)' },
+            step3Desc: { ms: 'Setelah lulus, log masuk ke portal <a href="#" class="text-blue-600 underline">e-SPECTRA</a>. Mohon \'Assignment\' (AA) baru.', en: 'After passing, log in to the <a href="#" class="text-blue-600 underline">e-SPECTRA</a> portal. Apply for a new \'Assignment\' (AA).' },
+            step4Title: { ms: 'Bayar & Terima', en: 'Pay & Receive' },
+            step4Desc: { ms: 'Bayar yuran permohonan (RM60) + yuran tahunan. Terima Callsign (contoh: 9W2XYZ) anda!', en: 'Pay the application fee (RM60) + annual fee. Receive your Callsign (e.g., 9W2XYZ)!' },
+            
+            tableHeaderType: { ms: 'Jenis Bayaran', en: 'Fee Type' },
+            tableHeaderAmount: { ms: 'Jumlah (RM)', en: 'Amount (RM)' },
+            feeRow1Type: { ms: 'Yuran Peperiksaan (RAE)', en: 'Examination Fee (RAE)' },
+            feeRow2Type: { ms: 'Yuran Permohonan AA (Sekali sahaja)', en: 'AA Application Fee (One-time)' },
+            feeRow3Type: { ms: 'Yuran Tahunan Kelas A', en: 'Annual Fee Class A' },
+            feeRow4Type: { ms: 'Yuran Tahunan Kelas B', en: 'Annual Fee Class B' },
+            feeRow5Type: { ms: 'Yuran Tahunan Kelas C', en: 'Annual Fee Class C' },
+            
+            resourcesTitle: { ms: 'Pautan Berguna', en: 'Useful Links' },
+            linkESPECTRA: { ms: 'Portal e-SPECTRA (Permohonan Lesen)', en: 'e-SPECTRA Portal (License Application)' },
+            linkSEMS: { ms: 'Portal SEMS (Daftar Peperiksaan)', en: 'SEMS Portal (Exam Registration)' },
+            linkGuidelines: { ms: 'Garis Panduan MCMC (Laman Web)', en: 'MCMC Guidelines (Website)' },
+            
+            footerDisclaimer: { ms: 'Penafian: Laman web ini adalah panduan tidak rasmi untuk tujuan panduan. Sila rujuk laman web rasmi <a href="https://www.mcmc.gov.my" class="text-yellow-400 hover:underline">MCMC</a> untuk maklumat perundangan yang paling tepat dan terkini.', en: 'Disclaimer: This website is an unofficial guide for informational purposes. Please refer to the official <a href="https://www.mcmc.gov.my" class="text-yellow-400 hover:underline">MCMC</a> website for the most accurate and up-to-date legal information.' },
+            footerCredit: { ms: '&copy; 2025 Panduan Radio Amatur Malaysia. Dibina dengan semangat 73. &copy;', en: '&copy; 2025 Malaysian Amateur Radio Guide. Built with the spirit of 73. &copy;' }
+        };
+
+        // Function to set language
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang; // Set HTML lang attribute
+            document.getElementById('langToggle').textContent = lang === 'ms' ? 'EN / MS' : 'MS / EN';
+
+            // Update main translations
+            for (const id in translations) {
+                const element = document.getElementById(id);
+                if (element && translations[id][lang]) {
+                    if (id === 'heroButton') {
+                         // Special handling for hero button to preserve icon
+                        const arrow = element.querySelector('.fas');
+                        element.firstChild.textContent = translations[id][lang] + ' '; // Use firstChild to update text without removing icon
+                    }
+                    else if (id === 'introPara2' || id === 'tip1' || id === 'examFeeText' || id === 'examFormatA' || id === 'examFormatC' || id === 'step1Desc' || id === 'step3Desc' || id === 'footerDisclaimer' || id === 'footerCredit') {
+                        element.innerHTML = translations[id][lang];
+                    } 
+                    else {
+                        element.textContent = translations[id][lang];
+                    }
+                }
+            }
+
+            // REPAIR: Removed generic [data-ms] loop which caused crash on missing strong tags.
+            // Using explicit blocks below to handle specific formatting differences.
+            
+            if (lang === 'ms') {
+                document.getElementById('classCMinAgeLabel').innerHTML = '<i class="fas fa-user-clock w-6 text-green-500"></i> Umur Minima: <strong>12 Tahun</strong>';
+                document.getElementById('classCPowerLabel').innerHTML = '<i class="fas fa-bolt w-6 text-green-500"></i> Kuasa: Max <strong>25 Watt</strong>';
+                document.getElementById('classCBandsLabel').innerHTML = '<i class="fas fa-broadcast-tower w-6 text-green-500"></i> Jalur: <strong>VHF & UHF</strong>';
+                document.getElementById('classCExamLabel').innerHTML = '<i class="fas fa-book w-6 text-green-500"></i> Ujian: <strong>35 Soalan (1 Jam)</strong>';
+                
+                document.getElementById('classBMinAgeLabel').innerHTML = '<i class="fas fa-user-clock w-6 text-blue-500"></i> Umur Minima: <strong>14 Tahun</strong>';
+                document.getElementById('classBPowerLabel').innerHTML = '<i class="fas fa-bolt w-6 text-blue-500"></i> Kuasa: Max <strong>50 Watt</strong>';
+                document.getElementById('classBBandsLabel').innerHTML = '<i class="fas fa-broadcast-tower w-6 text-blue-500"></i> Jalur: <strong>VHF/UHF & HF Terpilih</strong>';
+                document.getElementById('classBExamLabel').innerHTML = '<i class="fas fa-book w-6 text-blue-500"></i> Ujian: <strong>50 Soalan (1.5 Jam)</strong>';
+
+                document.getElementById('classAMinAgeLabel').innerHTML = '<i class="fas fa-user-clock w-6 text-yellow-500"></i> Umur Minima: <strong>15 Tahun</strong>';
+                document.getElementById('classAPowerLabel').innerHTML = '<i class="fas fa-bolt w-6 text-yellow-500"></i> Kuasa: Max <strong>1000 Watt (PEP)</strong>';
+                document.getElementById('classABandsLabel').innerHTML = '<i class="fas fa-broadcast-tower w-6 text-yellow-500"></i> Jalur: <strong>All Band</strong>';
+                document.getElementById('classAExamLabel').innerHTML = '<i class="fas fa-book w-6 text-yellow-500"></i> Ujian: <strong>50 Soalan (1.5 Jam)</strong>';
+
+            } else if (lang === 'en') {
+                document.getElementById('classCMinAgeLabel').innerHTML = '<i class="fas fa-user-clock w-6 text-green-500"></i> Minimum Age: <strong>12 Years</strong>';
+                document.getElementById('classCPowerLabel').innerHTML = '<i class="fas fa-bolt w-6 text-green-500"></i> Power: Max <strong>25 Watts</strong>';
+                document.getElementById('classCBandsLabel').innerHTML = '<i class="fas fa-broadcast-tower w-6 text-green-500"></i> Bands: <strong>VHF & UHF</strong>';
+                document.getElementById('classCExamLabel').innerHTML = '<i class="fas fa-book w-6 text-green-500"></i> Exam: <strong>35 Questions (1 Hour)</strong>';
+                
+                document.getElementById('classBMinAgeLabel').innerHTML = '<i class="fas fa-user-clock w-6 text-blue-500"></i> Minimum Age: <strong>14 Years</strong>';
+                document.getElementById('classBPowerLabel').innerHTML = '<i class="fas fa-bolt w-6 text-blue-500"></i> Power: Max <strong>50 Watts</strong>';
+                document.getElementById('classBBandsLabel').innerHTML = '<i class="fas fa-broadcast-tower w-6 text-blue-500"></i> Bands: <strong>VHF/UHF & Selected HF</strong>';
+                document.getElementById('classBExamLabel').innerHTML = '<i class="fas fa-book w-6 text-blue-500"></i> Exam: <strong>50 Questions (1.5 Hours)</strong>';
+
+                document.getElementById('classAMinAgeLabel').innerHTML = '<i class="fas fa-user-clock w-6 text-yellow-500"></i> Minimum Age: <strong>15 Years</strong>';
+                document.getElementById('classAPowerLabel').innerHTML = '<i class="fas fa-bolt w-6 text-yellow-500"></i> Power: Max <strong>1000 Watts (PEP)</strong>';
+                document.getElementById('classABandsLabel').innerHTML = '<i class="fas fa-broadcast-tower w-6 text-yellow-500"></i> Bands: <strong>All Band</strong>';
+                document.getElementById('classAExamLabel').innerHTML = '<i class="fas fa-book w-6 text-yellow-500"></i> Exam: <strong>50 Questions (1.5 Hours)</strong>';
+            }
+        }
+
+        // Function to toggle between languages
+        function toggleLanguage() {
+            setLanguage(currentLang === 'ms' ? 'en' : 'ms');
+        }
+
+        // Initialize the page in Malay on load
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage('ms');
+        });
+    </script>
+</body>
+</html>
